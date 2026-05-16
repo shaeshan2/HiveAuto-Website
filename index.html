@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hive Auto Lab | Premium Car Detailing</title>
+  <meta
+    name="description"
+    content="Hive Auto Lab delivers premium paint correction, ceramic coating, and detailing services with precision."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="noise-layer"></div>
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <img
+          class="brand-logo"
+          src="./assets/logo.gif"
+          alt="Hive Auto Lab"
+          width="160"
+          height="160"
+        />
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+      <nav class="main-nav">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="#booking">Book Now</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">PREMIUM DETAILING EXPERIENCE</p>
+          <h1 class="reveal">
+            Black Belt Precision.<br />
+            Gold Standard Finish.
+          </h1>
+          <p class="hero-sub reveal">
+            Hive Auto Lab transforms every vehicle with deep-clean detailing, paint correction,
+            and long-lasting protection crafted for enthusiasts and daily drivers.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#booking" class="btn btn-primary">Schedule a Detail</a>
+            <a href="#services" class="btn btn-ghost">Explore Services</a>
+          </div>
+          <div class="hero-stats reveal">
+            <article>
+              <h3>75+</h3>
+              <p>Vehicles Detailed</p>
+            </article>
+            <article>
+              <h3>4.9/5</h3>
+              <p>Customer Rating</p>
+            </article>
+            <article>
+              <h3>2h</h3>
+              <p>Avg. Turnaround</p>
+            </article>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="car-shell float hero-brand-panel">
+            <video
+              class="hero-video"
+              src="./assets/hero-showcase.mov"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Hive Auto Lab detailing showcase"
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">OUR SERVICES</p>
+        <h2 class="section-title reveal">Built Around Your Car's Needs</h2>
+        <div class="service-grid">
+          <article class="card reveal">
+            <h3>Signature Interior Detail</h3>
+            <p>Deep extraction, steam treatment, leather care, and odor neutralization.</p>
+            <span class="tag">45+ point checklist</span>
+          </article>
+          <article class="card reveal">
+            <h3>Paint Correction</h3>
+            <p>Multi-stage machine polish to remove swirls, haze, and light defects.</p>
+            <span class="tag">1-2 step correction</span>
+          </article>
+          <article class="card reveal">
+            <h3>Ceramic Coating</h3>
+            <p>Hydrophobic protection for gloss, easier washes, and UV resistance.</p>
+            <span class="tag">Up to 5 year options</span>
+          </article>
+          <article class="card reveal">
+            <h3>Window Tinting</h3>
+            <p>Precision film installation for heat rejection, UV blocking, and a clean finish.</p>
+            <span class="tag">Multiple shades available</span>
+          </article>
+          <article class="card reveal">
+            <h3>Vehicle Wrapping</h3>
+            <p>Color change and accent wraps installed with careful prep and clean seam work.</p>
+            <span class="tag">Gloss, satin, and matte options</span>
+          </article>
+          <article class="card reveal">
+            <h3>Maintenance Program</h3>
+            <p>Monthly upkeep plans to preserve your finish and interior condition.</p>
+            <span class="tag">Subscription available</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <div class="pricing-head reveal">
+          <p class="eyebrow">PLACEHOLDER PRICING</p>
+          <h2 class="section-title">Transparent Packages</h2>
+          <div class="toggle-wrap">
+            <button class="toggle-btn is-active" data-size="sedan">Sedan</button>
+            <button class="toggle-btn" data-size="suv">SUV / Truck</button>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card reveal" data-plan="starter">
+            <h3>Starter Refresh</h3>
+            <p class="price" data-sedan="$XXX" data-suv="$XXX">$XXX</p>
+            <ul>
+              <li>Exterior foam wash</li>
+              <li>Interior vacuum + wipe down</li>
+              <li>Tire dressing + window clean</li>
+            </ul>
+            <a class="btn btn-ghost" href="#booking">Choose Plan</a>
+          </article>
+          <article class="price-card featured reveal" data-plan="premium">
+            <h3>Premium Detail</h3>
+            <p class="price" data-sedan="$XXX" data-suv="$XXX">$XXX</p>
+            <ul>
+              <li>Clay + decontamination wash</li>
+              <li>1-step paint enhancement</li>
+              <li>Interior deep clean + protectant</li>
+            </ul>
+            <a class="btn btn-primary" href="#booking">Most Popular</a>
+          </article>
+          <article class="price-card reveal" data-plan="elite">
+            <h3>Elite Protection</h3>
+            <p class="price" data-sedan="$XXX" data-suv="$XXX">$XXX</p>
+            <ul>
+              <li>2-step correction prep</li>
+              <li>Ceramic coating application</li>
+              <li>Aftercare guide + follow-up wash</li>
+            </ul>
+            <a class="btn btn-ghost" href="#booking">Choose Plan</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="section showcase">
+      <div class="container">
+        <p class="eyebrow reveal">RESULTS THAT SPEAK</p>
+        <h2 class="section-title reveal">Recent Transformations</h2>
+        <div class="showcase-grid">
+          <article class="show-card reveal">
+            <h3>Paint Revival</h3>
+            <p>Restored depth and mirror-like reflections on daily-driven paint.</p>
+          </article>
+          <article class="show-card reveal">
+            <h3>Interior Reset</h3>
+            <p>From stained fabric and dusty trims to fresh, protected surfaces.</p>
+          </article>
+          <article class="show-card reveal">
+            <h3>Ceramic Shield</h3>
+            <p>Long-term gloss protection ready for all-season driving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <p class="eyebrow reveal">OUR WORK</p>
+        <h2 class="section-title reveal">Vehicles We've Detailed</h2>
+        <div class="gallery-carousel reveal" data-gallery tabindex="0">
+          <div class="gallery-stage">
+            <div class="gallery-track" data-gallery-track>
+              <figure class="gallery-card">
+                <img
+                  src="./Pictures/IMG_7340.PNG"
+                  alt="Hive Auto Lab detailed vehicle"
+                  loading="eager"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="gallery-card">
+                <img
+                  src="./Pictures/IMG_7342.PNG"
+                  alt="Hive Auto Lab detailed vehicle"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="gallery-card">
+                <img
+                  src="./Pictures/IMG_7344.PNG"
+                  alt="Hive Auto Lab detailed vehicle"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="gallery-card">
+                <img
+                  src="./Pictures/IMG_7345.PNG"
+                  alt="Hive Auto Lab detailed vehicle"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="gallery-card">
+                <img
+                  src="./Pictures/IMG_7347.PNG"
+                  alt="Hive Auto Lab detailed vehicle"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+            <button
+              type="button"
+              class="gallery-nav gallery-nav-prev"
+              data-gallery-prev
+              aria-label="Previous image"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="gallery-nav gallery-nav-next"
+              data-gallery-next
+              aria-label="Next image"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p class="gallery-counter" data-gallery-counter aria-live="polite">1 / 5</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="section booking">
+      <div class="container booking-grid">
+        <div class="booking-copy reveal">
+          <p class="eyebrow">BOOK YOUR APPOINTMENT</p>
+          <h2 class="section-title">Tell Us About Your Vehicle</h2>
+          <p>
+            Fill in your details and we will confirm your appointment and final quote.
+            We will reach out to confirm availability and final pricing.
+          </p>
+        </div>
+        <form class="booking-form reveal" id="bookingForm" novalidate>
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Your full name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" placeholder="(XXX) XXX-XXXX" required />
+          </label>
+          <label>
+            Vehicle Type
+            <select name="vehicle" required>
+              <option value="">Select one</option>
+              <option>Sedan</option>
+              <option>SUV</option>
+              <option>Truck</option>
+              <option>Luxury / Exotic</option>
+            </select>
+          </label>
+          <label>
+            Service Interested In
+            <select name="service" required>
+              <option value="">Select service</option>
+              <option>Starter Refresh</option>
+              <option>Premium Detail</option>
+              <option>Elite Protection</option>
+              <option>Window Tinting</option>
+              <option>Vehicle Wrapping</option>
+            </select>
+          </label>
+          <label>
+            Preferred Date
+            <input type="date" name="date" required />
+          </label>
+          <label class="full">
+            Notes
+            <textarea name="notes" rows="4" placeholder="Any special requests or concerns?"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary full">Submit Request</button>
+          <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div class="social-block">
+        <h3>Follow Hive Auto Lab</h3>
+        <div class="social-links">
+          <a class="social-link" href="https://www.instagram.com/hiveautolab/" target="_blank" rel="noopener noreferrer" aria-label="Hive Auto Lab on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Zm-4.7 1.4a5.45 5.45 0 1 1 0 10.9 5.45 5.45 0 0 1 0-10.9Zm0 1.8a3.65 3.65 0 1 0 0 7.3 3.65 3.65 0 0 0 0-7.3Z"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/@hiveautolab" target="_blank" rel="noopener noreferrer" aria-label="Hive Auto Lab on TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14.2 3.25c.37 2.02 1.6 3.23 3.63 3.6v2.67a7.16 7.16 0 0 1-3.56-1v6.08a5.5 5.5 0 1 1-4.77-5.45v2.78a2.73 2.73 0 1 0 1.99 2.62V3.25h2.71Z"/>
+            </svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+16473909166">(647) 390-9166</a></p>
+        <p>Email: <a href="mailto:gurtaj.khakh16@gmail.com">gurtaj.khakh16@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>Brampton, ON</p>
+        <p>Mon-Sat: 8:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Hive Auto Lab. All rights reserved.</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
