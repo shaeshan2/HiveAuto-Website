@@ -3,7 +3,7 @@ const mainNav = document.querySelector(".main-nav");
 const navLinks = document.querySelectorAll(".main-nav a");
 const revealEls = document.querySelectorAll(".reveal");
 const toggleBtns = document.querySelectorAll(".toggle-btn");
-const prices = document.querySelectorAll(".price");
+const prices = document.querySelectorAll(".price[data-car]");
 const bookingForm = document.getElementById("bookingForm");
 const feedback = document.getElementById("formFeedback");
 const yearEl = document.getElementById("year");
@@ -39,7 +39,7 @@ toggleBtns.forEach((btn) => {
     btn.classList.add("is-active");
 
     prices.forEach((price) => {
-      const nextValue = size === "suv" ? price.dataset.suv : price.dataset.sedan;
+      const nextValue = price.dataset[size];
       if (nextValue) price.textContent = nextValue;
     });
   });
@@ -47,13 +47,33 @@ toggleBtns.forEach((btn) => {
 
 const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
+const bookingDateTimeInput = document.getElementById("bookingDateTime");
+let bookingDateTimePicker;
+
+if (typeof flatpickr !== "undefined" && bookingDateTimeInput) {
+  bookingDateTimePicker = flatpickr(bookingDateTimeInput, {
+    enableTime: true,
+    minDate: "today",
+    disable: [(date) => date.getDay() === 0],
+    dateFormat: "Y-m-d h:i K",
+    altInput: true,
+    altFormat: "F j, Y \\at h:i K",
+    minTime: "08:00",
+    maxTime: "18:00",
+    minuteIncrement: 30,
+    time_24hr: false,
+    allowInput: false,
+    clickOpens: true,
+  });
+}
+
 if (bookingForm && feedback) {
   bookingForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const formData = new FormData(bookingForm);
     const payload = Object.fromEntries(formData.entries());
-    const requiredFields = ["name", "email", "phone", "vehicle", "service", "date"];
+    const requiredFields = ["name", "email", "phone", "vehicle", "service", "datetime"];
     const missing = requiredFields.find((key) => !String(payload[key] || "").trim());
 
     if (missing) {
@@ -73,7 +93,7 @@ if (bookingForm && feedback) {
       `Phone: ${payload.phone}`,
       `Vehicle: ${payload.vehicle}`,
       `Service: ${payload.service}`,
-      `Preferred date: ${payload.date}`,
+      `Preferred date & time: ${payload.datetime}`,
       `Notes: ${payload.notes || "N/A"}`
     ].join("\n");
 
@@ -85,6 +105,7 @@ if (bookingForm && feedback) {
     feedback.textContent =
       "Request drafted in your email client. Send it to complete your booking inquiry.";
     bookingForm.reset();
+    bookingDateTimePicker?.clear();
   });
 }
 

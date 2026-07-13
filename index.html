@@ -15,6 +15,10 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+  />
 </head>
 <body>
   <div class="noise-layer"></div>
@@ -131,44 +135,57 @@
     <section id="pricing" class="section pricing-section">
       <div class="container">
         <div class="pricing-head reveal">
-          <p class="eyebrow">PLACEHOLDER PRICING</p>
-          <h2 class="section-title">Transparent Packages</h2>
-          <div class="toggle-wrap">
-            <button class="toggle-btn is-active" data-size="sedan">Sedan</button>
-            <button class="toggle-btn" data-size="suv">SUV / Truck</button>
+          <div>
+            <p class="eyebrow">HIVE DETAIL PRICING</p>
+            <h2 class="section-title">Transparent Packages</h2>
+          </div>
+          <div class="toggle-wrap" role="group" aria-label="Vehicle size">
+            <button class="toggle-btn is-active" type="button" data-size="car">Car</button>
+            <button class="toggle-btn" type="button" data-size="suv">SUV</button>
+            <button class="toggle-btn" type="button" data-size="truck">Truck</button>
           </div>
         </div>
-        <div class="pricing-grid">
-          <article class="price-card reveal" data-plan="starter">
-            <h3>Starter Refresh</h3>
-            <p class="price" data-sedan="$XXX" data-suv="$XXX">$XXX</p>
+        <div class="pricing-grid pricing-packages">
+          <article class="price-card reveal" data-plan="standard">
+            <h3>Standard Detail</h3>
+            <p class="price" data-car="$175" data-suv="$195" data-truck="$220">$175</p>
             <ul>
-              <li>Exterior foam wash</li>
-              <li>Interior vacuum + wipe down</li>
+              <li>Full exterior detail</li>
+              <li>Full interior detail</li>
               <li>Tire dressing + window clean</li>
             </ul>
             <a class="btn btn-ghost" href="#booking">Choose Plan</a>
           </article>
-          <article class="price-card featured reveal" data-plan="premium">
-            <h3>Premium Detail</h3>
-            <p class="price" data-sedan="$XXX" data-suv="$XXX">$XXX</p>
+          <article class="price-card featured reveal" data-plan="gold">
+            <h3>Gold Detail</h3>
+            <p class="price" data-car="$235" data-suv="$250" data-truck="$285">$235</p>
             <ul>
-              <li>Clay + decontamination wash</li>
-              <li>1-step paint enhancement</li>
-              <li>Interior deep clean + protectant</li>
+              <li>Everything in Standard Detail</li>
+              <li>Salt and stain removal</li>
+              <li>Interior shampoo treatment</li>
             </ul>
             <a class="btn btn-primary" href="#booking">Most Popular</a>
           </article>
-          <article class="price-card reveal" data-plan="elite">
-            <h3>Elite Protection</h3>
-            <p class="price" data-sedan="$XXX" data-suv="$XXX">$XXX</p>
-            <ul>
-              <li>2-step correction prep</li>
-              <li>Ceramic coating application</li>
-              <li>Aftercare guide + follow-up wash</li>
-            </ul>
-            <a class="btn btn-ghost" href="#booking">Choose Plan</a>
-          </article>
+        </div>
+        <p class="pricing-note reveal">
+          All packages include exterior and interior service. Gold package includes salt and stain removal plus shampoo.
+        </p>
+        <div class="pricing-addons reveal">
+          <h3 class="addons-title">Add-On Services</h3>
+          <div class="addons-grid">
+            <article class="price-card addon-card">
+              <h3>Engine Bay Detail</h3>
+              <p class="price">$50</p>
+              <p>Degrease and dress the engine bay for a clean, finished look.</p>
+              <a class="btn btn-ghost" href="#booking">Add to Booking</a>
+            </article>
+            <article class="price-card addon-card">
+              <h3>Exterior Trim Dressing</h3>
+              <p class="price">$40</p>
+              <p>Restore and protect exterior plastics and trim pieces.</p>
+              <a class="btn btn-ghost" href="#booking">Add to Booking</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -203,7 +220,7 @@
             <div class="gallery-track" data-gallery-track>
               <figure class="gallery-card">
                 <img
-                  src="./Pictures/IMG_7340.PNG"
+                  src="./Pictures/IMG_7340-2.jpg"
                   alt="Hive Auto Lab detailed vehicle"
                   loading="eager"
                   decoding="async"
@@ -211,7 +228,7 @@
               </figure>
               <figure class="gallery-card">
                 <img
-                  src="./Pictures/IMG_7342.PNG"
+                  src="./Pictures/IMG_7342.jpg"
                   alt="Hive Auto Lab detailed vehicle"
                   loading="lazy"
                   decoding="async"
@@ -219,7 +236,7 @@
               </figure>
               <figure class="gallery-card">
                 <img
-                  src="./Pictures/IMG_7344.PNG"
+                  src="./Pictures/IMG_7344.jpg"
                   alt="Hive Auto Lab detailed vehicle"
                   loading="lazy"
                   decoding="async"
@@ -227,7 +244,7 @@
               </figure>
               <figure class="gallery-card">
                 <img
-                  src="./Pictures/IMG_7345.PNG"
+                  src="./Pictures/IMG_7345.jpg"
                   alt="Hive Auto Lab detailed vehicle"
                   loading="lazy"
                   decoding="async"
@@ -235,7 +252,7 @@
               </figure>
               <figure class="gallery-card">
                 <img
-                  src="./Pictures/IMG_7347.PNG"
+                  src="./Pictures/IMG_7347.jpg"
                   alt="Hive Auto Lab detailed vehicle"
                   loading="lazy"
                   decoding="async"
@@ -274,8 +291,7 @@
           <p class="eyebrow">BOOK YOUR APPOINTMENT</p>
           <h2 class="section-title">Tell Us About Your Vehicle</h2>
           <p>
-            Fill in your details and we will confirm your appointment and final quote.
-            We will reach out to confirm availability and final pricing.
+            Fill in your details and we will confirm your appointment. Mention any add-ons in the notes field.
           </p>
         </div>
         <form class="booking-form reveal" id="bookingForm" novalidate>
@@ -289,13 +305,13 @@
           </label>
           <label>
             Phone
-            <input type="tel" name="phone" placeholder="(XXX) XXX-XXXX" required />
+            <input type="tel" name="phone" placeholder="(647) 390-9166" required />
           </label>
           <label>
             Vehicle Type
             <select name="vehicle" required>
               <option value="">Select one</option>
-              <option>Sedan</option>
+              <option>Car</option>
               <option>SUV</option>
               <option>Truck</option>
               <option>Luxury / Exotic</option>
@@ -305,16 +321,25 @@
             Service Interested In
             <select name="service" required>
               <option value="">Select service</option>
-              <option>Starter Refresh</option>
-              <option>Premium Detail</option>
-              <option>Elite Protection</option>
+              <option>Standard Detail</option>
+              <option>Gold Detail</option>
+              <option>Engine Bay Detail</option>
+              <option>Exterior Trim Dressing</option>
               <option>Window Tinting</option>
               <option>Vehicle Wrapping</option>
             </select>
           </label>
-          <label>
-            Preferred Date
-            <input type="date" name="date" required />
+          <label class="full">
+            Preferred Date & Time
+            <input
+              type="text"
+              name="datetime"
+              id="bookingDateTime"
+              placeholder="Click to choose a date and time"
+              required
+              autocomplete="off"
+              readonly
+            />
           </label>
           <label class="full">
             Notes
@@ -360,6 +385,7 @@
     <p class="copyright">© <span id="year"></span> Hive Auto Lab. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="./script.js"></script>
 </body>
 </html>
